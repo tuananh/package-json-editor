@@ -10,7 +10,6 @@
   "license": "MIT",
   "dependencies": {
     "automerge": "0.7.1",
-    "debug": "3.1.0",
     "detect-indent": "5.0.0",
     "detect-newline": "2.1.0",
     "dset": "1.0.1",
