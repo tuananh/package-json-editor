@@ -1,0 +1,20 @@
+{
+  "name": "npm-package-editor",
+  "version": "1.0.0",
+  "description": "npm package editor that preserve newline and indentation",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*.test.js"
+  },
+  "author": "Tuan Anh Tran <me@tuananh.org> (https://tuananh.org)",
+  "license": "MIT",
+  "dependencies": {
+    "automerge": "0.7.1",
+    "debug": "3.1.0",
+    "detect-indent": "5.0.0",
+    "detect-newline": "2.1.0",
+    "dset": "1.0.1",
+    "omit-deep-lodash": "1.0.0",
+    "tape": "4.9.0"
+  }
+}
