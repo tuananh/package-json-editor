@@ -1,7 +1,7 @@
 {
-  "name": "npm-package-editor",
+  "name": "package-json-editor",
   "version": "1.0.0",
-  "description": "npm package editor that preserve newline and indentation",
+  "description": "npm package json editor that preserve newline and indentation",
   "main": "index.js",
   "scripts": {
     "test": "tape test/*.test.js"
