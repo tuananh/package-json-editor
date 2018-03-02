@@ -1,7 +1,7 @@
 var fs = require('fs')
 var path = require('path')
 var t = require('tape')
-var npmPackageEditor = require('../src')
+var packageJsonEditor = require('../src')
 
 var originTree = fs.readFileSync(
     path.resolve(__dirname + '/package.json'),
@@ -15,7 +15,7 @@ t.test('merge test', t => {
     mutated.dependencies.debug = '^1.0.0'
     delete mutated.license
 
-    var newTree = npmPackageEditor(originTree)
+    var newTree = packageJsonEditor(originTree)
         .merge(mutated)
         .toJSON()
 

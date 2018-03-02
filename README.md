@@ -13,7 +13,7 @@ We can use this package to edit the tree directly using `.set()` method or we ca
 ## Usage
 
 ```js
-var npmPackageEditor = require('package-json-editor')
+var packageJsonEditor = require('package-json-editor')
 
 var originTree = fs.readFileSync('./package.json', 'utf-8')
 var mutated = JSON.parse(originTree)
@@ -21,12 +21,12 @@ mutated.dependencies.debug = '^1.0.0'
 mutated.description = 'new description'
 delete mutated.license
 
-var newTree = npmPackageEditor(originTree)
+var newTree = packageJsonEditor(originTree)
     .merge(mutated)
     .toString()
 
 // or
-var anotherTree = npmPackageEditor(originTree)
+var anotherTree = packageJsonEditor(originTree)
     .set('dependencies.detect-indent', '^5.0.1')
     .toJSON()
 ```

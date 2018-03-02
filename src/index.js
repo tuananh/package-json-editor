@@ -9,11 +9,11 @@ var DEFAULT_INDENT = 2
 var CRLF = '\r\n'
 var LF = '\n'
 
-module.exports = function(json) {
-    return new NpmPackageEditor(json)
+module.exports = function (json) {
+    return new PackageJsonEditor(json)
 }
 
-function NpmPackageEditor(json) {
+function PackageJsonEditor(json) {
     assert.equal(
         typeof json === 'object' || typeof json === 'string',
         true,
@@ -34,7 +34,7 @@ function NpmPackageEditor(json) {
     return this
 }
 
-NpmPackageEditor.prototype.toString = function toString() {
+PackageJsonEditor.prototype.toString = function toString() {
     let json = JSON.stringify(
         omitDeep(this._doc.json, ['_objectId', '_conflicts']),
         null,
@@ -47,11 +47,11 @@ NpmPackageEditor.prototype.toString = function toString() {
     return json + LF
 }
 
-NpmPackageEditor.prototype.toJSON = function toJSON() {
+PackageJsonEditor.prototype.toJSON = function toJSON() {
     return this._doc.json
 }
 
-NpmPackageEditor.prototype.merge = function merge(newData) {
+PackageJsonEditor.prototype.merge = function merge(newData) {
     assert.equal(
         typeof newData === 'object' || typeof newData === 'string',
         true,
@@ -66,7 +66,7 @@ NpmPackageEditor.prototype.merge = function merge(newData) {
     return this
 }
 
-NpmPackageEditor.prototype.set = function set(path, value) {
+PackageJsonEditor.prototype.set = function set(path, value) {
     this._doc = Automerge.change(this._doc, `set data at path ${path}`, doc => {
         dset(doc.json, path, value)
     })
