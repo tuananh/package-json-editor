@@ -1,6 +1,6 @@
 {
   "name": "package-json-editor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "npm package json editor that preserve newline and indentation",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,9 @@
     "detect-indent": "5.0.0",
     "detect-newline": "2.1.0",
     "dset": "1.0.1",
-    "omit-deep-lodash": "1.0.0",
+    "omit-deep-lodash": "1.0.0"
+  },
+  "devDependencies": {
     "tape": "4.9.0"
   }
 }
