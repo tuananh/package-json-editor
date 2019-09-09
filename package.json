@@ -6,7 +6,7 @@
   "scripts": {
     "test": "tape test/*.test.js"
   },
-  "repository": "github:tuananh/package-json-editor",
+  "repository": "https://github.com/tuananh/package-json-editor",
   "author": "Tuan Anh Tran <me@tuananh.org> (https://tuananh.org)",
   "license": "MIT",
   "dependencies": {
